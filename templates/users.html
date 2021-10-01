@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block titre%}
+utilisateurs
+{% endblock %}
+
+{% block contenu %}
+  {% for d in data %}
+    <li>{{ d.firstname }} {{ d.lastname }}</li>
+  {% endfor %}
+{% endblock %}
