@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block titre%}
+hello
+{% endblock %}
+
+{% block contenu %}
+<img src="{{url_for('static_dir', path='images/image.jpg')}}" />
+{% endblock %}

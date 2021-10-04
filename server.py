@@ -1,5 +1,8 @@
 from flask import Flask
-from flask import render_template
+from flask import (
+                    render_template,
+                    send_from_directory
+                  ) 
 
 app = Flask(__name__)
 app.debug = True
@@ -13,7 +16,7 @@ data = [
 
 @app.route('/')
 def home():
-  return "ceci est la page d'accueil"
+  return render_template('home.html')
 
 @app.route('/hello/<name>')
 def page(name):
@@ -32,6 +35,10 @@ def users():
 @app.route('/dataplus')
 def usersplus():
   return render_template('users.html', data=data)
+
+@app.route("/static/<path:path>")
+def static_dir(path):
+    return send_from_directory("static", path)
 
 if __name__ == "__main__":
   app.run(debug=True)

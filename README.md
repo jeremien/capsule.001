@@ -1,5 +1,5 @@
 introduction au développement web avec Flask
-
+https://openschool.art/pad/p/capsule001
 
 # activer l'environement python
  python -m venv venv
@@ -17,3 +17,9 @@ flask run
 
 # mode debug
 python server.py
+
+# template jinja2
+dossier templates
+
+# assets
+static avec une route

@@ -5,7 +5,9 @@ utilisateurs
 {% endblock %}
 
 {% block contenu %}
+<ul>
   {% for d in data %}
     <li>{{ d.firstname }} {{ d.lastname }}</li>
   {% endfor %}
+</ul>
 {% endblock %}

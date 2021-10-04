@@ -1,17 +1,18 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>site</title>
-    </head>
+{% include "partials/header.html" %}
+
     <body>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">accueil</a></li>
+                <li><a href="{{ url_for('usersplus') }}">users</a></li>
+            </ul>
+        </nav>
         <h1>
         {% block titre %}
         {% endblock %}
         </h1>
         
-        <ul>
         {% block contenu %}
         {% endblock %}
-        </ul>
     </body>
 </html>
