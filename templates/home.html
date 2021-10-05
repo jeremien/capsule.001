@@ -5,5 +5,6 @@ hello
 {% endblock %}
 
 {% block contenu %}
+<h2>{{ content }}</h2>
 <img src="{{url_for('static_dir', path='images/image.jpg')}}" />
 {% endblock %}
